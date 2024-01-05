@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class ImportData{
     public static Customer []importCustomer(String selc){
-            Customer []c=new Customer[9999];
+            Customer []c=new Customer[10000];
             if(selc.equals("1")){
             try{
             Scanner sc=new Scanner(new FileInputStream("/Users/zirui/Desktop/JavaProject/Project/src/cust.csv"));
@@ -23,11 +23,12 @@ public class ImportData{
             catch(FileNotFoundException e){
             System.out.printf("ERROR - A %s occurred:\n%s\n",e.getClass().toString(),e.getMessage());
             }
+            System.out.println("Import cust.csv successfully");
             }
             return c;
     }
-    public static Employee[] importEmployee(String selc){
-        Employee [] e=new Employee[9999];
+    public static Employee[] importEmployee(String selc,int pin){
+        Employee [] e=new Employee[10000];
         if(selc.equals("1")){
         try{
             Scanner sc=new Scanner(new FileInputStream("/Users/zirui/Desktop/JavaProject/Project/src/employee.csv"));
@@ -42,11 +43,13 @@ public class ImportData{
         catch(FileNotFoundException fe){
             System.out.printf("ERROR - A %s occurred:\n%s\n",fe.getClass().toString(),fe.getMessage());
         }
+        if(pin==1)
+        System.out.println("Import employee.csv successfully");    
         }
         return e;
     }
     public static Sales[] importSales(String selc){
-        Sales [] s=new Sales[9999];
+        Sales [] s=new Sales[10000];
         if(selc.equals("1")){
         try{
             Scanner sc=new Scanner(new FileInputStream("/Users/zirui/Desktop/JavaProject/Project/src/sales.csv"));
@@ -61,6 +64,7 @@ public class ImportData{
         catch(FileNotFoundException e){
             System.out.printf("ERROR - A %s occurred:\n%s\n",e.getClass().toString(),e.getMessage());
         }
+        System.out.println("Import sales.csv successfully");    
         }
         return s;
     }
@@ -83,6 +87,7 @@ public class ImportData{
         catch(FileNotFoundException e){
             System.out.printf("ERROR - A %s occurred:\n%s\n",e.getClass().toString(),e.getMessage());
         }
+        System.out.println("Import vehicle.csv successfully");    
         }
         return v;
     }
@@ -120,7 +125,7 @@ public class ImportData{
             catch(IOException ioe){
                 System.out.printf("ERROR - A %s occurred:\n%s\n",ioe.getClass().toString(),ioe.getMessage());
             }  
-        Company.e[Employee.record]=new Employee(eid,name,Integer.toString(status),pass);
+        Company.e=importEmployee("1",0);
 
         
         }
