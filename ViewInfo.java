@@ -60,6 +60,30 @@ public class ViewInfo {
      }        
     }
 
+    private static void displayCustomerDataByCustomerId(String customerId) {
+        try (BufferedReader customerReader = new BufferedReader(new FileReader(CUSTOMER_FILE))) {
+            String line;
+
+            while ((line = customerReader.readLine()) != null) {
+                String[] data = line.split(",");
+                String custId = data[0];// Assuming customer ID is in the 1st column
+
+                // Check if the custId matches the input customerId
+                if (custId.equals(customerId)) {
+                    // Display the relevant customer data
+                    for (int i = 0; i < data.length; i++) {
+                        // Set the width of the second column to be larger
+                        int columnWidth = (i == 1) ? 30 : 15; // Adjust the widths as needed
+                        System.out.printf("%-" + columnWidth + "s", data[i]);
+                    }
+                    System.out.println();
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     
     public static void displayOwnSalesRecords(String employeeId) {
         boolean printedHeader = false;
