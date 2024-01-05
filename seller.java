@@ -15,7 +15,7 @@ public class seller extends base {
         return salary + commission + allowance + bonus;
     }
 
-    public double getAllowance(){
+    private double getAllowance(){
         Random g = new Random();
         int number = g.nextInt(2);
 
