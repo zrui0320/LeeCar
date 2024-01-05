@@ -199,7 +199,7 @@ public class Company {
                     for(int i=0;i<4;i++)
                         selection[i]=scanner.next();
                     c=ImportData.importCustomer(selection[0]);
-                    e=ImportData.importEmployee(selection[1]);
+                    e=ImportData.importEmployee(selection[1],1);
                     s=ImportData.importSales(selection[2]);
                     v=ImportData.importVehicle(selection[3]);
                     System.out.println("Import done.");
@@ -208,7 +208,7 @@ public class Company {
                 case "3":
                     System.out.println("\nPerforming action...");
                     if(!selection[1].equals("1")){
-                    e=ImportData.importEmployee("1");
+                    e=ImportData.importEmployee("1",0);
                     }
                     ImportData.addManagement();
                     // scanner.close();
