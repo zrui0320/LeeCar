@@ -31,7 +31,7 @@ public class manager extends base {
         if(ttl <= 800000.00){
             return 0.01;
         }else if(ttl>800000.00 && ttl<=1600000.00){
-            return 0.115;
+            return 0.0115;
         }else if(ttl>1600000.00 && ttl<=2500000.00){
             return 0.0125;
         }else{
