@@ -3,14 +3,12 @@ public class Employee {
     private String employeeName;
     private String employeeStatus; // 0 for sales employee, 1 for management employee
     private String password;
-    public static int record=0;
     
     public Employee(String employeeId, String employeeName, String employeeStatus, String password) {
         this.employeeId = employeeId;
         this.employeeName = employeeName;
         this.employeeStatus = employeeStatus;
         this.password = password;
-        record++;
     }
 
     // Getter for employeeId
