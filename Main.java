@@ -27,7 +27,7 @@ public class Main {
                     System.out.print("Enter secret key: ");
                     secretKey = sc.nextLine();
                     if (company.validateSecretKey(secretKey)) {
-                        System.out.println("Employee ID or username given: " + Company.employeeIDGenerator());
+                        System.out.println("Employee ID given: " + Company.employeeIDGenerator());
                         System.out.print("Enter your name: ");
                         name = sc.nextLine();
                         System.out.print("Enter password: ");
