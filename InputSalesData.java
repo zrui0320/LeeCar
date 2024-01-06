@@ -6,9 +6,9 @@ import java.time.format.DateTimeFormatter;
 
 
 // import static sales.InputCustomerData.saveCustomerToCSV;
-public class InputSalesData {
+public class InputSalesData extends Company {
 
-    public static void InputSalesData() {
+    public static void InputSalesData(username) {
         String file = "/Users/zirui/Desktop/JavaProject/Project/src/sales.csv";
         BufferedReader reader = null;
         String line = "";
@@ -57,8 +57,9 @@ public class InputSalesData {
         String carPlate = s.nextLine();
         System.out.print("Enter Customer ID: ");
         String custId = s.nextLine();
-        System.out.print("Enter Employee ID: ");
-        String employeeId = s.nextLine();
+        String employeeId = username;
+        System.out.print("Enter Employee ID: "+username);
+        System.out.println("");
         
         saveSalesToCSV( file,  salesId,  dateTime,  carPlate,  custId, employeeId);
 
