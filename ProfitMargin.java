@@ -82,7 +82,6 @@ public class ProfitMargin {
         return modal;
     }
     
-    //left operational expenditure for salary of employee
     public void calculator(String year) {
         seller s = new seller();
             
