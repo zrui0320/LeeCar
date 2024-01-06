@@ -20,7 +20,7 @@ public class Company {
     }
     
     public boolean validateSecretKey(String enteredKey) {
-        String secretKey = "leeCars";
+        String secretKey = "LeCars";
         return secretKey.equals(enteredKey);
     }
     
