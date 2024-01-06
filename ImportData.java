@@ -109,7 +109,6 @@ public class ImportData{
         String eid=Company.employeeIDGenerator();
         sb.append(eid);
         Scanner in=new Scanner(System.in);
-        Scanner scanner=new Scanner(System.in);
         System.out.println("\n--Adding employee--");
         System.out.println("Please enter name : ");
         String name=in.nextLine();
