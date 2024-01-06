@@ -139,7 +139,7 @@ public class Company {
 
                 case "5":
                     System.out.println("\nPerforming action...");
-                    InputSalesData.InputSalesData();
+                    InputSalesData.InputSalesData(username);
                     break;
 
                 case "6":
@@ -241,7 +241,7 @@ public class Company {
 
                 case "9":
                     System.out.println("\nPerforming action...");
-                    InputSalesData.InputSalesData();
+                    InputSalesData.InputSalesData(username);
                     break;
 
                 case "10":
