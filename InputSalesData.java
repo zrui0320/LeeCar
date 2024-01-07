@@ -8,7 +8,7 @@ import java.time.format.DateTimeFormatter;
 // import static sales.InputCustomerData.saveCustomerToCSV;
 public class InputSalesData extends Company {
 
-    public static void InputSalesData(username) {
+    public static void InputSalesData(String username) {
         String file = "/Users/zirui/Desktop/JavaProject/Project/src/sales.csv";
         BufferedReader reader = null;
         String line = "";
